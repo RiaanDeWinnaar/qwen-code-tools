@@ -1,0 +1,17 @@
+﻿{
+  "name": "lms-plugin-qwen-coder-tools",
+  "version": "1.0.0",
+  "description": "Agentic tools for Qwen3 30B Coder in LM Studio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lms dev",
+    "push": "lms push"
+  },
+  "dependencies": {
+    "@lmstudio/sdk": "1.4.0",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8"
+  }
+}

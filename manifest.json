@@ -1,0 +1,7 @@
+{
+  "type": "plugin",
+  "runner": "node",
+  "owner": "riaan",
+  "name": "qwen-coder-tools",
+  "revision": 1
+}

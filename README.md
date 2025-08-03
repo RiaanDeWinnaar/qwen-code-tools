@@ -71,8 +71,8 @@ Due to LM Studio's current plugin installation limitations, use the provided sta
 
 ### Development Setup
 ```bash
-git clone https://github.com/RiaanDeWinnaar/qwen-coder-tools.git
-cd qwen-coder-tools
+git clone https://github.com/RiaanDeWinnaar/qwen-code-tools.git
+cd qwen-code-tools
 npm install
 lms dev  # Starts development server
 ```
@@ -232,8 +232,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/RiaanDeWinnaar/qwen-coder-tools/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/RiaanDeWinnaar/qwen-coder-tools/discussions)
+- **Issues**: [GitHub Issues](https://github.com/RiaanDeWinnaar/qwen-code-tools/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/RiaanDeWinnaar/qwen-code-tools/discussions)
 - **Documentation**: [LM Studio Plugin Docs](https://lmstudio.ai/docs/typescript/plugins)
 
 ---

@@ -15,6 +15,15 @@ exports.configSchematics = (0, sdk_1.createConfigSchematics)()
     displayName: "Enable Web Search",
     subtitle: "Allow the model to search the web for information.",
 }, false)
+    .field("braveApiKey", "string", {
+    displayName: "Brave Search API Key",
+    subtitle: "API key for Brave Search (optional - improves search quality and rate limits)",
+    placeholder: "Enter your Brave API key here...",
+}, "")
+    .field("operationMode", "boolean", {
+    displayName: "Agent Mode",
+    subtitle: "Enable autonomous agent behavior (.act() mode) - when disabled, only individual tools are available",
+}, false)
     .build();
 exports.globalConfigSchematics = (0, sdk_1.createConfigSchematics)()
     .field("defaultTimeout", "numeric", {

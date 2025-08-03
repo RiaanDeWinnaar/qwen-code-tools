@@ -38,6 +38,15 @@ export const configSchematics = createConfigSchematics()
     },
     ""
   )
+  .field(
+    "operationMode",
+    "boolean",
+    {
+      displayName: "Agent Mode",
+      subtitle: "Enable autonomous agent behavior (.act() mode) - when disabled, only individual tools are available",
+    },
+    false
+  )
   .build();
 
 export const globalConfigSchematics = createConfigSchematics()

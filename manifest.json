@@ -3,5 +3,5 @@
   "runner": "node",
   "owner": "riaan",
   "name": "qwen-coder-tools",
-  "revision": 1
+  "revision": 2
 }

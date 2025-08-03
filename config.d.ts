@@ -16,6 +16,18 @@ export declare const configSchematics: import("@lmstudio/sdk").ConfigSchematics<
         type: boolean;
         valueTypeKey: "boolean";
     };
+} & {
+    braveApiKey: {
+        key: "braveApiKey";
+        type: string;
+        valueTypeKey: "string";
+    };
+} & {
+    operationMode: {
+        key: "operationMode";
+        type: boolean;
+        valueTypeKey: "boolean";
+    };
 }>;
 export declare const globalConfigSchematics: import("@lmstudio/sdk").ConfigSchematics<{
     defaultTimeout: {

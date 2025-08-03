@@ -6,6 +6,7 @@ import { join, extname, basename } from "path";
 import { exec } from "child_process";
 import { promisify } from "util";
 import { configSchematics } from "./config";
+import { createAgentTool } from "./agentProvider";
 
 const execAsync = promisify(exec);
 
@@ -496,6 +497,14 @@ export async function toolsProvider(ctl: ToolsProviderController) {
   tools.push(gitOperationTool);
   tools.push(packageManagerTool);
   tools.push(projectStructureTool);
+  
+  // Web search tool is already conditionally added above if enabled
+
+  // Add autonomous agent tool if Agent Mode is enabled
+  const agentTool = createAgentTool(ctl);
+  if (agentTool) {
+    tools.push(agentTool);
+  }
 
   return tools;
 }

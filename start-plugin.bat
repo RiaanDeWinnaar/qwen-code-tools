@@ -8,8 +8,8 @@ echo Starting Qwen Coder Tools Plugin Auto-Dev...
 REM Set the plugin directory
 set PLUGIN_DIR=c:\Users\riaan\.lmstudio\extensions\plugins\lmstudio\qwen-coder-tools
 
-REM Check if LM Studio is running (by checking for lms process)
-tasklist /FI "IMAGENAME eq lmstudio.exe" 2>NUL | find /I /N "lmstudio.exe">NUL
+REM Check if LM Studio is running (by checking for LM Studio process)
+tasklist /FI "IMAGENAME eq LM Studio.exe" 2>NUL | find /I /N "LM Studio.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo LM Studio is running. Starting plugin development server...
 ) else (

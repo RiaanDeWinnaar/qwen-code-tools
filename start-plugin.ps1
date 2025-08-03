@@ -8,7 +8,7 @@ Write-Host "Starting Qwen Coder Tools Plugin Auto-Dev..." -ForegroundColor Green
 $PluginDir = "c:\Users\riaan\.lmstudio\extensions\plugins\lmstudio\qwen-coder-tools"
 
 # Check if LM Studio is running
-$lmStudioProcess = Get-Process -Name "lmstudio" -ErrorAction SilentlyContinue
+$lmStudioProcess = Get-Process -Name "LM Studio" -ErrorAction SilentlyContinue
 
 if ($lmStudioProcess) {
     Write-Host "LM Studio is running. Starting plugin development server..." -ForegroundColor Green

@@ -5,6 +5,7 @@ A comprehensive development toolkit plugin for LM Studio, specifically optimized
 ![Plugin Status](https://img.shields.io/badge/status-beta-yellow)
 ![LM Studio](https://img.shields.io/badge/LM%20Studio-1.4.0+-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+<img width="393" height="1128" alt="image" src="https://github.com/user-attachments/assets/08d41850-3ac1-403a-81c8-9d3bea235a6b" />
 
 ## 🚀 Features
 
@@ -68,6 +69,7 @@ Due to LM Studio's current plugin installation limitations, use the provided sta
 # Linux/macOS
 ./start-plugin.sh
 ```
+<img width="1920" height="1200" alt="Screenshot 2025-08-09 121338" src="https://github.com/user-attachments/assets/73fc365e-a849-444c-a721-48cbcf402a93" />
 
 ### Development Setup
 ```bash

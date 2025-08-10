@@ -7,6 +7,9 @@ A comprehensive development toolkit plugin for LM Studio, specifically optimized
 ![License](https://img.shields.io/badge/license-MIT-green)
 <img width="393" height="1128" alt="image" src="https://github.com/user-attachments/assets/08d41850-3ac1-403a-81c8-9d3bea235a6b" />
 
+ALSO WORKS WITH GPT OSS
+<img width="1418" height="1152" alt="Screenshot 2025-08-10 134742" src="https://github.com/user-attachments/assets/f779999a-3068-4187-845f-ef51b89d4879" />
+
 ## 🚀 Features
 
 ### 🛠️ Development Tools
@@ -207,6 +210,8 @@ lms dev
 - ✅ Error handling and recovery
 
 ## 🤝 Contributing
+
+
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)

@@ -59,33 +59,100 @@ ALSO WORKS WITH GPT OSS
 
 ## 🛠️ Installation
 
-### Quick Start (Workaround)
-Due to LM Studio's current plugin installation limitations, use the provided startup scripts:
+### Auto-Setup Process (Recommended)
+Our enhanced startup scripts now provide automatic setup and installation:
 
-```bash
-# Windows
-.\start-plugin.bat
+1. **Download/Clone the Repository**
+   ```bash
+   git clone https://github.com/RiaanDeWinnaar/qwen-code-tools.git
+   cd qwen-code-tools
+   ```
 
-# PowerShell
-.\start-plugin.ps1
+2. **Start LM Studio** (run at least once to create extensions directory)
 
-# Linux/macOS
-./start-plugin.sh
-```
+3. **Run the Startup Script** for your platform:
+   ```bash
+   # Windows Command Prompt
+   .\start-plugin.bat
+   
+   # Windows PowerShell
+   .\start-plugin.ps1
+   
+   # Linux/macOS
+   ./start-plugin.sh
+   ```
+
+4. **That's it!** The script will:
+   - ✅ Auto-detect LM Studio installation
+   - ✅ Create plugin directory structure: `~/.lmstudio/extensions/plugins/lmstudio/qwen-coder-tools/`
+   - ✅ Copy all plugin files automatically
+   - ✅ Validate setup and start the development server
+
 <img width="1920" height="1200" alt="Screenshot 2025-08-09 121338" src="https://github.com/user-attachments/assets/73fc365e-a849-444c-a721-48cbcf402a93" />
+
+### Manual Installation (Alternative)
+If auto-setup doesn't work, follow these manual steps:
+
+1. **Create Plugin Directory:**
+   ```bash
+   # Windows
+   mkdir "%USERPROFILE%\.lmstudio\extensions\plugins\lmstudio\qwen-coder-tools"
+   
+   # Linux/macOS
+   mkdir -p ~/.lmstudio/extensions/plugins/lmstudio/qwen-coder-tools
+   ```
+
+2. **Copy Plugin Files:**
+   Copy these files from the repository to the plugin directory:
+   - `manifest.json`
+   - `package.json`
+   - `src/` directory
+   - All compiled `.js` files (`index.js`, `toolsProvider.js`, etc.)
+
+3. **Run Development Server:**
+   ```bash
+   cd ~/.lmstudio/extensions/plugins/lmstudio/qwen-coder-tools
+   lms dev
+   ```
 
 ### Development Setup
 ```bash
 git clone https://github.com/RiaanDeWinnaar/qwen-code-tools.git
 cd qwen-code-tools
 npm install
-lms dev  # Starts development server
+npx tsc        # Compile TypeScript
+lms dev        # Starts development server
 ```
 
 ### Auto-Startup Configuration
 1. **Windows Startup**: Copy `start-plugin.bat` to `shell:startup`
 2. **Desktop Shortcut**: Create shortcut to `start-plugin.bat`
 3. **Task Scheduler**: Set up advanced scheduling with LM Studio detection
+
+### Troubleshooting
+
+#### "manifest.json not found" Error
+This error occurs when the plugin directory structure doesn't exist or files aren't copied correctly.
+
+**Solutions:**
+1. **Use Auto-Setup**: Run the startup script from the repository directory
+2. **Check LM Studio**: Ensure LM Studio has been run at least once
+3. **Manual Copy**: Follow the manual installation steps above
+4. **Check Paths**: Verify the plugin directory exists at:
+   - Windows: `%USERPROFILE%\.lmstudio\extensions\plugins\lmstudio\qwen-coder-tools\`
+   - Linux/macOS: `~/.lmstudio/extensions/plugins/lmstudio/qwen-coder-tools/`
+
+#### "LM Studio not running" Error
+**Solutions:**
+1. Start LM Studio application
+2. Wait for LM Studio to fully load
+3. Run the startup script again
+
+#### Permission Issues
+**Solutions:**
+1. **Windows**: Run Command Prompt as Administrator
+2. **Linux/macOS**: Check directory permissions: `chmod 755 ~/.lmstudio`
+3. Ensure you have write access to the home directory
 
 ## 🎯 Usage Examples
 
@@ -157,12 +224,19 @@ Supports scaffolding for:
 - 🔄 Complete workflow automation
 - 🎯 Ideal for complex, end-to-end development projects
 
-## � Known Issues
+## 💡 Known Issues
 
-### Installation Problem
-LM Studio currently lacks a documented method for local plugin installation without Hub authentication. This plugin includes startup scripts as a workaround to maintain persistent functionality through `lms dev` automation.
+### ~~Installation Problem~~ ✅ FIXED
+~~LM Studio currently lacks a documented method for local plugin installation without Hub authentication.~~
 
-**Workaround**: Use the provided startup scripts for seamless plugin experience.
+**✅ RESOLVED**: Our enhanced startup scripts now provide automatic setup:
+- Auto-detects LM Studio installation
+- Creates plugin directory structure automatically  
+- Copies plugin files to the correct location
+- Validates setup before starting
+- Provides clear error messages and troubleshooting guidance
+
+**Current Solution**: Use the provided auto-setup startup scripts for seamless plugin installation and experience.
 
 ## 🔧 Development
 
